@@ -39,6 +39,7 @@ public class LoginCheck extends HttpServlet {
 		
 		if( userName.equals( "admin" ) && password.equals( "admin" ) )
 		{
+			response.addHeader( "userName", userName );
 			response.sendRedirect( "Success.jsp" );
 		}
 		else
